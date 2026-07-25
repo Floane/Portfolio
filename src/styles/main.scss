@@ -1,0 +1,11 @@
+@use 'tokens' as *;
+@import '@fontsource/onest/400.css';
+@import '@fontsource/onest/500.css';
+@import '@fontsource/martian-mono/400.css';
+@import '@fontsource/martian-mono/700.css';
+
+body {
+    background: $color-bg;
+    color: $color-text;
+    font-family: $font-body;
+}
