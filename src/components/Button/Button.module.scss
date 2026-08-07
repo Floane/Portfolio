@@ -1,0 +1,47 @@
+@use '../../styles/tokens' as *;
+
+.button {
+  font-family: $font-body;
+  font-size: $text-base;
+  font-weight: $weight-medium;
+  padding: $space-3 $space-6;
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  transition: background-color $duration-base $ease,
+              transform $duration-fast $ease;
+
+  &:focus-visible {
+    outline: 2px solid $color-focus;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  background-color: $color-accent;
+  color: $color-on-accent;
+
+  &:hover:not(:disabled) {
+    background-color: $color-accent-hover;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  color: $color-text-warm;
+  border: 1px solid $color-border-strong;
+
+  &:hover:not(:disabled) {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+}
+
+@include reduced-motion {
+  .button { transition: none; }
+}

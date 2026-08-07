@@ -1,0 +1,49 @@
+@use '../../styles/tokens' as *;
+
+.hero {
+    padding: $space-24 $space-6;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.label {
+    font-family: $font-mono;
+    font-size: $text-xs;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-accent;
+    margin: 0 0 $space-4;
+}
+
+.name {
+    font-family: $font-title;
+    font-weight: $weight-medium;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    margin: 0 0 $space-6;
+}
+
+.firstName,
+.lastName {
+    display: block;
+    font-size: clamp(2.5rem, 12vw, 3.815rem);
+}
+
+.lastName {
+    color: $color-accent;
+}
+
+.tagline {
+    font-family: $font-body;
+    font-size: $text-lg;
+    color: $color-text-warm;
+    line-height: $leading-base;
+    max-width: 32rem;
+    margin: 0 0 $space-8;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-4;
+}

@@ -1,0 +1,24 @@
+@use '../../styles/tokens' as *;
+
+.about {
+    padding: $space-24 $space-6;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 42rem;
+}
+
+.text {
+    font-family: $font-body;
+    font-size: $text-lg;
+    color: $color-text-warm;
+    line-height: $leading-base;
+    margin: 0 0 $space-6;
+}
+
+a[download] {
+    text-decoration: none;
+    display: inline-block;
+}

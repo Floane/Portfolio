@@ -1,0 +1,53 @@
+@use '../../styles/tokens' as *;
+
+.card {
+    display: block;
+    height: 100%;
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: $space-6;
+    text-decoration: none;
+    transition: border-color $duration-base $ease,
+                transform $duration-base $ease;
+
+    &:hover {
+    border-color: $color-accent;
+    transform: translateY(-4px);
+    }
+
+    &:focus-visible {
+    outline: 2px solid $color-focus;
+    outline-offset: 2px;
+    }
+}
+
+.title {
+    font-family: $font-title;
+    font-size: $text-xl;
+    color: $color-text;
+    margin: $space-3 0 $space-2;
+    letter-spacing: -0.03em;
+}
+
+.tagline {
+    font-family: $font-body;
+    font-size: $text-sm;
+    color: $color-text-muted;
+    line-height: $leading-base;
+    margin: 0 0 $space-4;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@include reduced-motion {
+    .card { transition: none; }
+    .card:hover { transform: none; }
+}

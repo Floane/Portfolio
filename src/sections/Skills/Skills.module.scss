@@ -1,0 +1,48 @@
+@use '../../styles/tokens' as *;
+
+.skills {
+    padding: $space-24 $space-6;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-8;
+
+    @include respond(sm) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(lg) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.groupTitle {
+    font-family: $font-mono;
+    font-size: $text-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $color-accent;
+    margin: 0 0 $space-4;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    font-family: $font-body;
+    font-size: $text-base;
+    color: $color-text-warm;
+    padding: $space-2 0;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}

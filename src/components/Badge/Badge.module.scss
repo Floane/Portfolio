@@ -1,0 +1,28 @@
+@use '../../styles/tokens' as *;
+
+.badge {
+  display: inline-block;
+  font-family: $font-mono;
+  font-size: $badge-size;
+  font-weight: $badge-weight;
+  letter-spacing: $badge-letter-spacing;
+  text-transform: $badge-transform;
+  padding: $space-1 $space-3;
+  border-radius: $radius-sm;
+  white-space: nowrap;
+}
+
+.accent {
+  background-color: $color-accent-alt-bg;
+  color: $color-accent;
+}
+
+.context {
+  background-color: $color-accent-alt-bg;
+  color: $color-accent-alt;
+}
+
+.outline {
+  color: $color-text-muted;
+  border: 1px solid $color-border;
+}

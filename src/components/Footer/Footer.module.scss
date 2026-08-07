@@ -1,0 +1,61 @@
+@use '../../styles/tokens' as *;
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: $space-4;
+    padding: $space-8 $space-6;
+    border-top: 1px solid $color-border;
+    background-color: $color-bg;
+}
+
+.copyright {
+    font-family: $font-body;
+    font-size: $text-sm;
+    color: $color-text-faint;
+    margin: 0;
+}
+
+.links,
+.social {
+    display: flex;
+    gap: $space-6;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    font-family: $font-body;
+    font-size: $text-sm;
+    color: $color-text-muted;
+    text-decoration: none;
+    transition: color $duration-fast $ease;
+
+    &:hover {
+        color: $color-accent;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $color-focus;
+        outline-offset: 4px;
+    }
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@include reduced-motion {
+    .link { transition: none; }
+}

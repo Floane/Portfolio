@@ -1,0 +1,77 @@
+@use '../../styles/tokens' as *;
+
+.projects {
+    padding: $space-24 $space-6;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-4;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include respond(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+    margin-bottom: $space-6;
+}
+
+.filter {
+    font-family: $font-mono;
+    font-size: $badge-size;
+    font-weight: $badge-weight;
+    letter-spacing: $badge-letter-spacing;
+    text-transform: uppercase;
+    padding: $space-2 $space-3;
+    border-radius: $radius-sm;
+    border: 1px solid $color-border;
+    background-color: transparent;
+    color: $color-text-muted;
+    cursor: pointer;
+    transition: border-color $duration-fast $ease, color $duration-fast $ease;
+
+    &:hover {
+        border-color: $color-accent;
+        color: $color-accent;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $color-focus;
+        outline-offset: 2px;
+    }
+}
+
+.active {
+    background-color: $color-accent;
+    color: $color-on-accent;
+    border-color: $color-accent;
+
+    &:hover {
+        color: $color-on-accent;
+    }
+}
+
+.count {
+    font-family: $font-body;
+    font-size: $text-sm;
+    color: $color-text-faint;
+    margin: 0 0 $space-6;
+}
+
+@include reduced-motion {
+    .filter { transition: none; }
+}

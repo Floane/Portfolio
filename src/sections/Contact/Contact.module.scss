@@ -1,0 +1,68 @@
+@use '../../styles/tokens' as *;
+
+.contact {
+    padding: $space-24 $space-6;
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+}
+
+.label {
+    font-family: $font-body;
+    font-size: $text-sm;
+    color: $color-text-warm;
+}
+
+.input,
+.textarea {
+    font-family: $font-body;
+    font-size: $text-base;
+    color: $color-text;
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    padding: $space-3;
+    transition: border-color $duration-fast $ease;
+
+    &:focus {
+        outline: none;
+        border-color: $color-accent;
+    }
+
+    &[aria-invalid='true'] {
+        border-color: $color-error;
+    }
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.error {
+    font-family: $font-body;
+    font-size: $text-sm;
+    color: $color-error;
+}
+
+.status {
+    font-family: $font-body;
+    font-size: $text-base;
+    color: $color-success;
+    margin: 0;
+}
+
+@include reduced-motion {
+    .input,
+    .textarea { transition: none; }
+}

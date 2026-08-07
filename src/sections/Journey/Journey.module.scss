@@ -1,0 +1,63 @@
+@use '../../styles/tokens' as *;
+
+.journey {
+    padding: $space-24 $space-6;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-6;
+
+    @include respond(md) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: $space-4;
+    }
+}
+
+.step {
+    border-left: 2px solid $color-border;
+    padding-left: $space-4;
+
+    @include respond(md) {
+        border-left: none;
+        border-top: 2px solid $color-border;
+        padding-left: 0;
+        padding-top: $space-4;
+    }
+}
+
+.current {
+    border-color: $color-accent;
+}
+
+.period {
+    display: block;
+    font-family: $font-mono;
+    font-size: $text-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $color-accent;
+    margin-bottom: $space-2;
+}
+
+.stepTitle {
+    font-family: $font-body;
+    font-size: $text-base;
+    font-weight: $weight-medium;
+    color: $color-text;
+    margin: 0 0 $space-2;
+}
+
+.description {
+    font-family: $font-body;
+    font-size: $text-sm;
+    color: $color-text-muted;
+    line-height: $leading-base;
+    margin: 0;
+}
