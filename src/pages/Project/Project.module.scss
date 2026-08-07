@@ -1,0 +1,32 @@
+@use '../../styles/tokens' as *;
+
+.project {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $space-16 $space-6;
+}
+
+.type {
+    font-family: $font-mono;
+    font-size: $badge-size;
+    text-transform: uppercase;
+    letter-spacing: $badge-letter-spacing;
+    color: $color-accent-alt;
+    margin: 0 0 $space-4;
+}
+
+.title {
+    font-family: $font-title;
+    font-size: $text-3xl;
+    color: $color-text;
+    letter-spacing: -0.04em;
+    margin: 0 0 $space-3;
+}
+
+.tagline {
+    font-family: $font-body;
+    font-size: $text-lg;
+    color: $color-text-warm;
+    line-height: $leading-base;
+    margin: 0;
+}
