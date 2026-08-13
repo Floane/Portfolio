@@ -1,0 +1,53 @@
+@use '../../styles/tokens' as *;
+
+.legal {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: $space-16 $space-6;
+}
+
+.title {
+    font-family: $font-title;
+    font-size: $text-3xl;
+    color: $color-text;
+    letter-spacing: -0.04em;
+    margin: 0 0 $space-12;
+}
+
+.block {
+    margin-bottom: $space-8;
+}
+
+.blockTitle {
+    font-family: $font-mono;
+    font-size: $text-lg;
+    color: $color-accent;
+    letter-spacing: -0.02em;
+    margin: 0 0 $space-3;
+}
+
+.text {
+    font-family: $font-body;
+    font-size: $text-base;
+    color: $color-text-warm;
+    line-height: $leading-base;
+    margin: 0 0 $space-3;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.link {
+    color: $color-accent;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $color-focus;
+        outline-offset: 2px;
+    }
+}
