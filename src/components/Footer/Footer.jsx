@@ -4,7 +4,9 @@ import styles from './Footer.module.scss';
 function Footer() {
     return (
         <footer className={styles.footer}>
-            <p className={styles.copyright}>© 2026 Floane Varathen</p>
+            <p className={styles.copyright}>
+                © {new Date().getFullYear()} Floane Varathen
+            </p>
 
             <nav aria-label="Liens légaux">
                 <ul className={styles.links}>
