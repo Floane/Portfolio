@@ -170,8 +170,7 @@ export const projects = [
       { name: 'PHP', category: 'langage' },
       { name: 'WordPress', category: 'CMS' },
     ],
-    // ATTENTION : carte conditionnée à l'accord écrit de Digital Innovest.
-    // Structure : contexte commun, puis 2 blocs courts distincts (IZI / KO Films).
+
     context:
       'En alternance chez Digital Innovest, intégration de la refonte visuelle de deux sites clients finaux, avec prise en charge du responsive et de l’accessibilité.',
     objectives:
