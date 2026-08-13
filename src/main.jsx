@@ -7,6 +7,7 @@ import App from './App.jsx';
 import Project from './pages/Project/Project.jsx';
 import LegalNotice from './pages/Legal/LegalNotice';
 import PrivacyPolicy from './pages/Legal/PrivacyPolicy';
+import NotFound from './pages/NotFound/NotFound.jsx';
 import ScrollToHash from './components/ScrollToHash/ScrollToHash';
 
 createRoot(document.getElementById('root')).render(
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/projets" element={<Navigate to="/#projets" replace />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

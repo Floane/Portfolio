@@ -1,0 +1,60 @@
+@use '../../styles/tokens' as *;
+
+.notFound {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: $space-24 $space-6;
+    text-align: center;
+}
+
+.code {
+    font-family: $font-title;
+    font-size: clamp(4rem, 20vw, 8rem);
+    font-weight: $weight-medium;
+    color: $color-accent;
+    line-height: 1;
+    margin: 0 0 $space-4;
+    letter-spacing: -0.05em;
+}
+
+.title {
+    font-family: $font-title;
+    font-size: $text-2xl;
+    color: $color-text;
+    letter-spacing: -0.03em;
+    margin: 0 0 $space-4;
+}
+
+.text {
+    font-family: $font-body;
+    font-size: $text-base;
+    color: $color-text-muted;
+    line-height: $leading-base;
+    margin: 0 0 $space-8;
+}
+
+.link {
+    display: inline-block;
+    font-family: $font-body;
+    font-size: $text-base;
+    color: $color-accent;
+    text-decoration: none;
+    padding: $space-3 $space-6;
+    border: 1px solid $color-accent;
+    border-radius: $radius-md;
+    transition: background-color $duration-fast $ease, color $duration-fast $ease;
+
+    &:hover {
+        background-color: $color-accent;
+        color: $color-on-accent;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $color-focus;
+        outline-offset: 2px;
+    }
+}
+
+@include reduced-motion {
+    .link { transition: none; }
+}
