@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { Menu, X } from 'lucide-react';
 
 const NAV_LINKS = [
-    { href: '#projets', label: 'Projets' },
-    { href: '#competences', label: 'Compétences' },
-    { href: '#parcours', label: 'Parcours' },
-    { href: '#veille', label: 'Veille' },
-    { href: '#contact', label: 'Contact' },
+    { to: '/#projets', label: 'Projets' },
+    { to: '/#competences', label: 'Compétences' },
+    { to: '/#parcours', label: 'Parcours' },
+    { to: '/#veille', label: 'Veille' },
+    { to: '/#contact', label: 'Contact' },
 ];
 
 function Header() {
@@ -23,9 +24,9 @@ function Header() {
 
     return (
         <header className={styles.header}>
-            <a href="#accueil" className={styles.logo}>
+            <Link to="/" className={styles.logo}>
                 Floane<span className={styles.dot}>.</span>V
-            </a>
+            </Link>
 
             <button
                 type="button"
@@ -45,10 +46,14 @@ function Header() {
             >
                 <ul className={styles.navList}>
                     {NAV_LINKS.map((link) => (
-                    <li key={link.href}>
-                        <a href={link.href} className={styles.navLink} onClick={() => setIsOpen(false)}>
-                        {link.label}
-                        </a>
+                    <li key={link.to}>
+                         <Link
+                            to={link.to}
+                            className={styles.navLink}
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {link.label}
+                        </Link>
                     </li>
                     ))}
                 </ul>
