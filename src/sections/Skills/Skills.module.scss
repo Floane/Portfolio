@@ -36,6 +36,9 @@
 }
 
 .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-family: $font-body;
     font-size: $text-base;
     color: $color-text-warm;
@@ -45,4 +48,9 @@
     &:last-child {
         border-bottom: none;
     }
+}
+
+.icon {
+    color: $color-accent-alt;
+    flex-shrink: 0;
 }

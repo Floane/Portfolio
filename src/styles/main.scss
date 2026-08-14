@@ -8,4 +8,12 @@ body {
     background: $color-bg;
     color: $color-text;
     font-family: $font-body;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

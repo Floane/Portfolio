@@ -12,7 +12,7 @@ function Layout() {
 
             <Header />
 
-            <main id="contenu">
+            <main id="contenu" className={styles.main}>
                 <Outlet />
             </main>
 

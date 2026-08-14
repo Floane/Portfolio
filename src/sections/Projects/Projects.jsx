@@ -39,7 +39,7 @@ function Projects() {
                 {filteredProjects.length} project{filteredProjects.length > 1 ? 's' : ''}
             </p>
 
-            <ul className={styles.grid}>
+            <ul className={styles.grid} key={activeFilter}> 
                 {filteredProjects.map((project) => (
                     <li key={project.id}>
                         <Card project={project} />

@@ -6,9 +6,15 @@ import styles from './Card.module.scss';
 function Card({ project }) {
     const { slug, title, tagline, type, domains, stack } = project;
 
+    const contextVariant = {
+        academique: 'context',
+        professionnel: 'contextEntreprise',
+        personnel: 'contextPersonnel',
+    }[type];
+
     return (
         <Link to={`/projets/${slug}`} className={styles.card}>
-        <Badge variant="context">{PROJECT_TYPES[type]}</Badge>
+        <Badge variant={contextVariant}>{PROJECT_TYPES[type]}</Badge>
 
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.tagline}>{tagline}</p>

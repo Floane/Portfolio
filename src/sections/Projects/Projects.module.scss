@@ -1,5 +1,16 @@
 @use '../../styles/tokens' as *;
 
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .projects {
     padding: $space-24 $space-6;
     max-width: 1200px;
@@ -9,7 +20,7 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: $space-4;
+    gap: $space-6;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -22,6 +33,18 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.grid li {
+    display: flex;
+    animation: cardAppear 400ms ease both;
+}
+
+.grid li:nth-child(1) { animation-delay: 0ms; }
+.grid li:nth-child(2) { animation-delay: 60ms; }
+.grid li:nth-child(3) { animation-delay: 120ms; }
+.grid li:nth-child(4) { animation-delay: 180ms; }
+.grid li:nth-child(5) { animation-delay: 240ms; }
+.grid li:nth-child(6) { animation-delay: 300ms; }
 
 .filters {
     display: flex;
