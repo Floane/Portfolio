@@ -24,26 +24,24 @@ function Footer() {
             </nav>
 
             <ul className={styles.social}>
-                <li
-                
-                    href="#"
-                    className={styles.link}
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <a>
+                <li>
+                    <a
+                        href="https://github.com/Floane"
+                        className={styles.link}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         GitHub
                         <span className={styles.srOnly}> (nouvel onglet)</span>
                     </a>
                 </li>
-                <li
-                
-                    href="#"
-                    className={styles.link}
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <a>
+                <li>
+                    <a
+                        href="https://www.linkedin.com/in/floane-varathen-794660275"
+                        className={styles.link}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         LinkedIn
                         <span className={styles.srOnly}> (nouvel onglet)</span>
                     </a>
