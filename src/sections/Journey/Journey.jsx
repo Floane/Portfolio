@@ -3,24 +3,24 @@ import styles from './Journey.module.scss';
 
 const STEPS = [
     {
-        period: 'Bac scientifique',
-        title: 'Sciences de l\'ingénieur, physique, informatique',
-        description: 'La découverte de la logique technique et du goût pour résoudre des problèmes.',
+        period: 'Bac scientifique + prépa',
+        title: 'Un socle scientifique',
+        description: 'Bac maths, physique et SI, puis prépa PTSI. J\'y ai appris la rigueur et la logique.',
     },
     {
-        period: 'Formation',
-        title: 'Développeuse web — OpenClassrooms',
-        description: 'React, JavaScript, Node.js. La confirmation que le développement web était ma voie.',
+        period: 'Réorientation',
+        title: 'Le déclic',
+        description: 'En passant à l\'informatique, j\'ai découvert le développement web. Je n\'ai plus lâché.',
     },
     {
-        period: 'Alternance',
-        title: 'Digital Innovest',
-        description: 'Projets clients réels : intégration, PHP, WordPress, accessibilité en production.',
+        period: '2024-2026',
+        title: 'La spécialisation',
+        description: 'Formation Développeuse web chez OpenClassrooms, en alternance chez Digital Innovest.',
     },
     {
-        period: '2026 →',
-        title: 'Formation Développeuse Full-Stack',
-        description: 'Compléter ma pratique front d\'une vraie maîtrise back-end.',
+        period: '2026-2027',
+        title: 'La suite',
+        description: 'Développeuse full-stack, pour compléter le front par le back.',
         current: true,
     },
 ];

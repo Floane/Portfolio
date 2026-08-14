@@ -5,7 +5,7 @@ import styles from './Contact.module.scss';
 
 function Contact() {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [status, setStatus] = useState('idle'); // idle | sending | success | error
+    const [status, setStatus] = useState('idle');
     const [errors, setErrors] = useState({});
 
     function handleChange(e) {
@@ -38,7 +38,7 @@ function Contact() {
 
     return (
         <section className={styles.contact} id="contact">
-            <SectionTitle label="Travaillons ensemble">Contact</SectionTitle>
+            <SectionTitle label="Dites-moi bonjour">Contact</SectionTitle>
 
             <form className={styles.form} onSubmit={handleSubmit} noValidate>
                 <div className={styles.field}>

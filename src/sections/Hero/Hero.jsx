@@ -14,7 +14,7 @@ function Hero() {
         </h1>
 
         <p className={styles.tagline}>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
+            Passionnée par le développement web et un peu perfectionniste : pour moi, un site n'est pas vraiment fini tant qu'il n'est pas accessible à tous et rapide.
         </p>
 
         <div className={styles.actions}>
