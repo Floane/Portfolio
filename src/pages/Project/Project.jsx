@@ -3,13 +3,14 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Badge from '../../components/Badge/Badge';
 import { projects, PROJECT_TYPES } from '../../data/projects';
 import styles from './Project.module.scss';
+import NotFound from '../NotFound/NotFound';
 
 function Project() {
     const { slug } = useParams();
     const project = projects.find((p) => p.slug === slug);
 
     if (!project) {
-        return <Navigate to="/#projets" replace />;
+        return <NotFound />;
     }
 
     const { type, title, tagline, context, objectives, skills, stack, results, improvements, metrics, links, } = project;
