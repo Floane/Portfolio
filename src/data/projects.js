@@ -30,6 +30,10 @@ export const projects = [
       { name: 'Lighthouse', category: 'outil' },
       { name: 'WAVE', category: 'outil' },
     ],
+
+    metaTitle: 'Nina Carducci - accessibilité & performances | Floane Varathen',
+    metaDescription: 'Optimisation d\'un site de photographe : 29 Mo d\'images ramenés à 5, accessibilité passée de 67 à 100 et référencement local corrigé.',
+
     // TODO: remplacer par le texte final de la fiche
     context:
       'Site vitrine d’une photographe professionnelle, fonctionnel mais lourd et mal référencé (jQuery, Bootstrap, 15 images pour 29,4 Mo).',
@@ -72,6 +76,10 @@ export const projects = [
       { name: 'Sass', category: 'style' },
       { name: 'Vite', category: 'outil' },
     ],
+
+    metaTitle: 'Kasa - application React de location | Floane Varathen',
+    metaDescription: 'Application React d\'une plateforme de location : composants réutilisables, React Router et logique de données isolée, pensée pour évoluer.',
+
     context:
       'Refonte en React de l’application d’une plateforme de location entre particuliers, à partir de maquettes Figma et de données statiques.',
     objectives:
@@ -106,6 +114,10 @@ export const projects = [
       { name: 'JWT', category: 'sécurité' },
       { name: 'Sharp', category: 'librairie' },
     ],
+
+    metaTitle: 'Mon Vieux Grimoire - API REST sécurisée | Floane Varathen',
+    metaDescription: 'API REST sécurisée pour noter et partager ses lectures : authentification, gestion des notes et optimisation des images côté serveur.',
+
     context:
       'Site de notation de livres pour une chaîne de librairies. Le front React existait ; la mission portait sur l’intégralité du back-end.',
     objectives:
@@ -138,6 +150,10 @@ export const projects = [
       { name: 'Figma', category: 'outil' },
       { name: 'Veille', category: 'méthode' },
     ],
+
+    metaTitle: 'Menu Maker by Qwenta - gestion de projet | Floane Varathen',
+    metaDescription: 'Cadrage d\'un projet web : 16 user stories traduites en 72 tâches techniques, un backlog priorisé et une planification claire.',
+
     context:
       'Imprimeur souhaitant se diversifier vers le numérique avec un outil de création de menus pour restaurateurs. Rôle de spécifications techniques et gestion de projet (Product Owner temporaire).',
     objectives:
@@ -170,6 +186,9 @@ export const projects = [
       { name: 'PHP', category: 'langage' },
       { name: 'WordPress', category: 'CMS' },
     ],
+
+    metaTitle: 'Intégration clients en alternance | Floane Varathen',
+    metaDescription: 'Refonte graphique de deux site clients en alternance chez Digital Innovest.',
 
     context:
       'En alternance chez Digital Innovest, intégration de la refonte visuelle de deux sites clients finaux, avec prise en charge du responsive et de l’accessibilité.',
@@ -207,6 +226,10 @@ export const projects = [
       { name: 'Sass', category: 'style' },
       { name: 'Vercel', category: 'hébergement' },
     ],
+
+    metaTitle: 'Mon portfolio - démonstration technique | Floane Varathen',
+    metaDescription: 'React, Vite et Sass, un site pensé comme une démonstration concrète d\'accessibilité et de performance, pas une simple vitrine.',
+
     // À RÉDIGER EN FIN DE PROJET avec les chiffres réels mesurés.
     context:
       'Portfolio conçu de bout en bout comme un projet à part entière : design system maison, accessibilité et performance traitées comme des exigences, pas des options.',

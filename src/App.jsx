@@ -9,6 +9,11 @@ import Contact from './sections/Contact/Contact';
 function App() {
     return (
         <>
+            <title>Floane Varathen | Développeuse front-end & accessibilité</title>
+            <meta name="description" content="Développeuse front-end spécialisée en accessibilité et performance. Découvrez mes projets React, mon parcours et ma façon de construire des sites performants et accessibles à tous." />
+            <meta name="robots" content="index, follow" />
+            <link rel="canonical" href="https://floanevarathen.vercel.app/" />
+
             <Hero />
             <About />
             <Projects />
