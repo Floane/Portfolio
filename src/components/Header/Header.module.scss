@@ -11,15 +11,22 @@
 }
 
 .logo {
-    font-family: $font-mono;
-    font-size: $text-base;
-    color: $color-text;
-    text-decoration: none;
-    letter-spacing: -0.02em;
-}
+    display: inline-flex;
+    align-items: center;
 
-.dot {
-    color: $color-accent;
+    img {
+        height: 48px;
+        width: auto;
+        display: block;
+
+        @include respond(md) { height: 52px; }
+    }
+
+    &:focus-visible {
+        outline: 2px solid $color-focus;
+        outline-offset: 4px;
+        border-radius: $radius-sm;
+    }
 }
 
 .burger {

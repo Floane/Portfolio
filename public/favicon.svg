@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="oGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5B247"></stop>
+      <stop offset="45%" stop-color="#F39E1E"></stop>
+      <stop offset="100%" stop-color="#8B0806"></stop>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" fill="#16110D"></rect>
+  <text x="32" y="41" font-family="&#39;Martian Mono&#39;, monospace" font-size="22" font-weight="800" text-anchor="middle">
+    <tspan fill="#F5EDE3">Fl</tspan><tspan fill="url(#oGradient)">o</tspan>
+  </text>
+</svg>

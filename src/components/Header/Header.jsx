@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { Menu, X } from 'lucide-react';
+import logo from '../../assets/logo.svg';
 
 const NAV_LINKS = [
     { to: '/#projets', label: 'Projets' },
@@ -25,7 +26,7 @@ function Header() {
     return (
         <header className={styles.header}>
             <Link to="/" className={styles.logo}>
-                Floane<span className={styles.dot}>.</span>V
+                <img src={logo} alt="Floane" width={141} height={48} />
             </Link>
 
             <button
