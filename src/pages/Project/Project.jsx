@@ -21,6 +21,14 @@ function Project() {
             <meta name="robots" content="index, follow" />
             <link rel="canonical" href={`https://floanevarathen.vercel.app/projets/${slug}`} />
 
+            <meta property="og:type" content="article" />
+            <meta property="og:site_name" content="Floane Varathen" />
+            <meta property="og:title" content={project.metaTitle} />
+            <meta property="og:description" content={project.metaDescription} />
+            <meta property="og:url" content={`https://floanevarathen.vercel.app/projets/${slug}`} />
+            <meta property="og:image" content={`https://floanevarathen.vercel.app/og-default.png`} />
+            <meta name="twitter:card" content="summary_large_image" />
+
             <article className={styles.project}>
                 <Link to="/#projets" className={styles.back}>
                     <ArrowLeft size={16} aria-hidden="true" />

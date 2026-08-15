@@ -14,6 +14,14 @@ function App() {
             <meta name="robots" content="index, follow" />
             <link rel="canonical" href="https://floanevarathen.vercel.app/" />
 
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="Floane Varathen" />
+            <meta property="og:title" content="Floane Varathen, développeuse front-end & accessibilité" />
+            <meta property="og:description" content="Développeuse front-end spécialisée en accessibilité et performance. Découvrez mes projets React, mon parcours et ma façon de construire des sites performants et accessibles à tous." />
+            <meta property="og:url" content="https://floanevarathen.vercel.app/" />
+            <meta property="og:image" content={`https://floanevarathen.vercel.app/og-default.png`} />
+            <meta name="twitter:card" content="summary_large_image" />
+
             <Hero />
             <About />
             <Projects />
