@@ -38,7 +38,7 @@ function Contact() {
 
     return (
         <section className={styles.contact} id="contact">
-            <SectionTitle label="Dites-moi bonjour">Contact</SectionTitle>
+            <SectionTitle label="Dites-moi bonjour :)">Contact</SectionTitle>
 
             <form className={styles.form} onSubmit={handleSubmit} noValidate>
                 <div className={styles.field}>

@@ -6,7 +6,8 @@
     justify-content: space-between;
     align-items: center;
     gap: $space-4;
-    padding: $space-8 $space-6;
+    padding-block: $space-8;
+    padding-inline: max($space-6, calc((100% - 1200px) / 2));
     border-top: 1px solid $color-border;
     background-color: $color-bg;
 }
