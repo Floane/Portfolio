@@ -13,7 +13,7 @@ function Project() {
         return <NotFound />;
     }
 
-    const { type, title, tagline, context, objectives, skills, stack, results, improvements, metrics, links, } = project;
+    const { type, title, tagline, context, objectives, skills, stack, results, improvements, metrics, links, cover, images } = project;
 
     return (
         <>
@@ -50,6 +50,12 @@ function Project() {
                     </ul>
                 </header>
 
+                {cover?.src && (
+                    <figure className={styles.cover}>
+                        <img src={cover.src} alt={cover.alt} className={styles.coverImg} />
+                    </figure>
+                )}
+
                 <div className={styles.content}>
                     <section className={styles.block}>
                         <h2 className={styles.blockTitle}>Contexte</h2>
@@ -72,13 +78,30 @@ function Project() {
                             <ul className={styles.metrics}>
                                 {metrics.map((metric) => (
                                     <li key={metric.label} className={styles.metric}>
-                                    <span className={styles.metricLabel}>{metric.label}</span>
-                                    <span className={styles.metricValues}>
-                                        <span className={styles.before}>{metric.before}</span>
-                                        <ArrowRight size={16} className={styles.arrow} aria-hidden="true" />
-                                        <span className={styles.srOnly}>passé à</span>
-                                        <span className={styles.after}>{metric.after}</span>
-                                    </span>
+                                        <span className={styles.metricLabel}>{metric.label}</span>
+                                        <span className={styles.metricValues}>
+                                            {metric.before != null && (
+                                                <>
+                                                    <span className={styles.before}>{metric.before}</span>
+                                                    <ArrowRight size={16} className={styles.arrow} aria-hidden="true" />
+                                                    <span className={styles.srOnly}>passé à</span>
+                                                </>
+                                            )}
+                                            <span className={styles.after}>{metric.after}</span>
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    )}
+
+                    {images && images.length > 0 && (
+                        <section className={styles.block}>
+                            <h2 className={styles.blockTitle}>Aperçus</h2>
+                            <ul className={styles.gallery}>
+                                {images.map((image) => (
+                                    <li key={image.src} className={styles.galleryItem}>
+                                        <img src={image.src} alt={image.alt} className={styles.galleryImg} loading="lazy" />
                                     </li>
                                 ))}
                             </ul>
@@ -95,22 +118,16 @@ function Project() {
                         <p className={styles.text}>{improvements}</p>
                     </section>
 
-                    {(links.repo || links.demo) && (
+                    {links && links.length > 0 && (
                         <section className={styles.block}>
                             <h2 className={styles.blockTitle}>Liens</h2>
                             <div className={styles.links}>
-                                {links.repo && (
-                                    <a href={links.repo} className={styles.projectLink} target="_blank" rel="noreferrer">
-                                    Code source
+                                {links.map((link) => (
+                                    <a key={link.url} href={link.url} className={styles.projectLink} target="_blank" rel="noreferrer">
+                                        {link.label}
                                         <span className={styles.srOnly}> (nouvel onglet)</span>
                                     </a>
-                                )}
-                                {links.demo && (
-                                    <a href={links.demo} className={styles.projectLink} target="_blank" rel="noreferrer">
-                                    Démo en ligne
-                                        <span className={styles.srOnly}> (nouvel onglet)</span>
-                                    </a>
-                                )}
+                                ))}
                             </div>
                         </section>
                     )}

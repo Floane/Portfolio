@@ -1,9 +1,9 @@
 @use '../../styles/tokens' as *;
 
 .project {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: $space-16 $space-6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $space-16 $space-6;
 }
 
 .back {
@@ -176,4 +176,38 @@
 
 @include reduced-motion {
     .back { transition: none; }
+}
+.cover {
+    margin: 0 0 $space-12;
+    border-radius: $radius-md;
+    overflow: hidden;
+    border: 1px solid $color-border;
+}
+
+.coverImg {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: $space-4;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.galleryItem {
+    margin: 0;
+}
+
+.galleryImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: $radius-md;
+    border: 1px solid $color-border;
 }
