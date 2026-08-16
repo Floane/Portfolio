@@ -259,21 +259,24 @@ export const projects = [
     skills:
       'Architecture pilotée par les données : une seule Card et une seule fiche projet affichent les six projets sans aucune condition par projet, ajouter un projet revient à ajouter un objet dans ce fichier. Design system maison en tokens Sass et composants réutilisables (Button, Badge, Card, SectionTitle). Accessibilité intégrée dès la conception : skip link, filtre projets annoncé en aria-live, icônes décoratives en aria-hidden, respect de prefers-reduced-motion. Performance : icônes Lucide, animation CSS native, contraste validé. Navigation par ancres rétablie via un composant ScrollToHash, le comportement natif étant cassé en SPA.',
     results:
-      'Scores Lighthouse mesurés en production : Performance [XX], Accessibilité [XX], Bonnes pratiques [XX], SEO [XX] — vérifiables en direct sur le site. Bibliothèque de composants réutilisables, routing React Router avec pages légales et 404 attrape-tout, métadonnées SEO par page (Open Graph, JSON-LD), formulaire de contact sans back-end (Formspree), déploiement continu sur Vercel.',
+      'Scores Lighthouse mesurés en production : Performance 100, Accessibilité 100, Bonnes pratiques 100, SEO 100, vérifiables en direct sur le site. Bibliothèque de composants réutilisables, routing React Router avec pages légales et 404 attrape-tout, métadonnées SEO par page (Open Graph, JSON-LD), formulaire de contact sans back-end (Formspree), déploiement continu sur Vercel.',
     improvements:
       'Le filtre par type de projet reporté à une v2. La conformité AA est acquise. Un audit manuel au lecteur d\'écran compléterait les scores autormatiques. Prochaine étape : l\'extension full-stack prévue.',
     metrics: [
-      { label: 'Performance', after: null },
-      { label: 'Accessibilité', after: null },
-      { label: 'Bonnes pratiques', after: null },
-      { label: 'SEO', after: null },
-    ], // à remplir avec les scores réels
+      { label: 'Performance', after: 100 },
+      { label: 'Accessibilité', after: 100 },
+      { label: 'Bonnes pratiques', after: 100 },
+      { label: 'SEO', after: 100 },
+    ],
     links: [
       { label: 'Code source', url: 'https://github.com/Floane/Portfolio' },
       { label: 'Démo en ligne', url: 'https://floanevarathen.vercel.app/' },
       { label: 'Kanban en ligne', url: '' },
     ],
     cover: { src: '/projects/mon-portfolio/cover.webp', alt: 'Aperçu du portfolio' },
-    images: [],
+    images: [
+      { src: '/projects/mon-portfolio/score-lighthouse.webp', alt: 'Score Lighthouse à 100' },
+      { src: '/projects/mon-portfolio/test-wave.webp', alt: 'Score Wave noté 10 sur 10' },
+    ],
   },
 ]
