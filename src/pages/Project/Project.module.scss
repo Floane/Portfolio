@@ -69,6 +69,10 @@
     margin-bottom: $space-8;
 }
 
+.blocks {
+    margin-bottom: $space-8;
+}
+
 .blockTitle {
     font-family: $font-mono;
     font-size: $text-lg;
@@ -187,8 +191,7 @@
 .coverImg {
     display: block;
     width: 100%;
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
+    height: auto;
 }
 
 .gallery {
@@ -207,7 +210,9 @@
 .galleryImg {
     display: block;
     width: 100%;
-    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background-color: $color-surface;
     border-radius: $radius-md;
     border: 1px solid $color-border;
 }
