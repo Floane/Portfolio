@@ -23,17 +23,32 @@ function Contact() {
         return newErrors;
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
         const newErrors = validate();
         setErrors(newErrors);
         if (Object.keys(newErrors).length > 0) return;
 
         setStatus('sending');
-        setTimeout(() => {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-        }, 1000);
+        try {
+            const response = await fetch('https://formspree.io/f/xppajodj', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                setStatus('error');
+            }
+        } catch {
+            setStatus('error');
+        }
     }
 
     return (
@@ -92,11 +107,12 @@ function Contact() {
                     )}
                 </div>
 
-                <Button type="submit" variant="primary" disabled={status === 'sending'}>
+                <Button type="submit" variant="primary" disabled={status === 'sending' || status === 'success'}>
                     {status === 'sending' ? 'Envoi en cours…' : 'Envoyer'}
                 </Button>
 
                 <p aria-live="polite" className={styles.status}>
+                    {status === 'sending' && 'Envoi en cours…'}
                     {status === 'success' && 'C\'est envoyé ! Je vous réponds au plus vite.'}
                     {status === 'error' && 'Aïe, le message n\'est pas parti. Réessayez, ou écrivez-moi à fvarathen@gmail.com'}
                 </p>
