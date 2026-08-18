@@ -261,7 +261,7 @@ export const projects = [
     results:
       'Scores Lighthouse mesurés en production : Performance 100, Accessibilité 100, Bonnes pratiques 100, SEO 100, vérifiables en direct sur le site. Bibliothèque de composants réutilisables, routing React Router avec pages légales et 404 attrape-tout, métadonnées SEO par page (Open Graph, JSON-LD), formulaire de contact sans back-end (Formspree), déploiement continu sur Vercel.',
     improvements:
-      'Le filtre par type de projet reporté à une v2. La conformité AA est acquise. Un audit manuel au lecteur d\'écran compléterait les scores autormatiques. Prochaine étape : l\'extension full-stack prévue.',
+      'Plusieurs pistes sont prévues pour une v2 : un fichier llms.txt pour exposer proprement mon contenu aux IA et aux agents de recherche, un filtre par type de projet, et la possibilité d\'agrandir les aperçus et de les faire défiler comme un carrousel contrôlé au clavier (en vue agrandie). Enfin, ce portfolio est pensé pour durer : je l\'enrichirai de mes compétences, projets et CV au fil de ma prochaine formation en développement full-stack.',
     metrics: [
       { label: 'Performance', after: 100 },
       { label: 'Accessibilité', after: 100 },
@@ -271,7 +271,7 @@ export const projects = [
     links: [
       { label: 'Code source', url: 'https://github.com/Floane/Portfolio' },
       { label: 'Démo en ligne', url: 'https://floanevarathen.vercel.app/' },
-      { label: 'Kanban en ligne', url: '' },
+      { label: 'Kanban en ligne', url: 'https://midi-swoop-ee3.notion.site/55478595b53c49f0a431f6c44029e787?v=3bf77cf8180a81d3923b000c52d5c6e7' },
     ],
     cover: { src: '/projects/mon-portfolio/cover.webp', alt: 'Aperçu du portfolio' },
     images: [

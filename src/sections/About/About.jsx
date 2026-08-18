@@ -19,8 +19,8 @@ function About() {
                     C'est normal qu'un site soit utilisable par n'importe qui, et j'aime l'idée de faire les choses bien jusqu'au bout.
                 </p>
 
-                <a href="#" download>
-                    <Button variant="secondary">Télécharger mon CV</Button>
+                <a href="/public/cv-floane-varathen.pdf" download>
+                    <Button variant="secondary">Télécharger mon CV (PDF)</Button>
                 </a>
             </div>
         </section>
